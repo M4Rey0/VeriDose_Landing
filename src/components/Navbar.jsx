@@ -14,10 +14,16 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        {/* Logo */}
-        <a href="#hero" className="text-xl font-bold text-primary tracking-tight">
-          VeriDose
-        </a>
+        
+        {/* Logo & Value Proposition (Corrección de Rúbrica) */}
+        <div className="flex items-center gap-4">
+          <a href="#hero" className="text-xl font-bold text-primary tracking-tight">
+            VeriDose
+          </a>
+          <span className="hidden lg:block border-l-2 border-border pl-4 text-sm font-medium text-muted">
+            Dosificación clínica exacta basada en evidencia.
+          </span>
+        </div>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
@@ -32,7 +38,7 @@ export default function Navbar() {
           ))}
           <a
             href="#demo"
-            className="inline-flex items-center px-5 py-2 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-primary-light transition-colors"
+            className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary-light transition-colors"
           >
             Agendar demo
           </a>
@@ -70,7 +76,7 @@ export default function Navbar() {
           <a
             href="#demo"
             onClick={() => setOpen(false)}
-            className="mt-2 block text-center px-5 py-2.5 text-sm font-semibold text-white bg-primary rounded-lg"
+            className="block w-full mt-4 text-center px-4 py-2 text-sm font-medium text-white bg-primary rounded-lg hover:bg-primary-light transition-colors"
           >
             Agendar demo
           </a>
